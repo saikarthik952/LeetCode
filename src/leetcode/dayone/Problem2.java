@@ -30,6 +30,8 @@ Output: 4
 
                 return mid;
             }
+            // check if the element is present in first half of rotated array, that will help determine whether we
+            // need to check only that part
             else if (array[mid] < array[low]) {
                 if (target < array[mid] || target >= array[low]) {
                     high = mid - 1;

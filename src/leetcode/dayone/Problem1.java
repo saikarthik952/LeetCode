@@ -34,10 +34,13 @@ public class Problem1 {
             int mid = low+(high-low)/2;
             if (array[mid] == target) {
                 start = mid;
+                // If we are searching for start, we must modify high to check left most list, to check if there is
+                // the same element
                 if (searchingForStart) {
 
                     high = mid - 1;
                 }
+                // same as above modify the low to check right most array from mid to check whether we have another chance of element
                 else {
                     low = mid + 1;
                 }
